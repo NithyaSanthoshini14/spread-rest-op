@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //destructuring method
+        let arr=[1,2,3,6,7,84,2]
+        const [a,b,c,d,e,f,g]=arr
+        console.log(a,b,c,d,e,f,g)
+        let obj={name:"Nithya",city:"wgl"}
+        var {name:n,city:i}=obj
+        console.log(n,i)
+        //default parameter
+        function add(a,b=6){
+            console.log(a+b)
+        }
+        add(9)
+        //spread operator
+        let array=[1,3,5,3,6,9,8]
+        let arr2=[...array]
+        console.log(arr2)
+        obj1={branch:"ECE",college:"Vce"}
+        obj2={id:"20",subject:"maths"}
+        obj3={...obj1,...obj2,age:"22"}
+        console.log(obj3)
+        //rest operator
+        function sum(...b){
+            total=0
+            for(i of b){
+                total+=i
+            }
+            console.log(total)
+        }
+        sum(22,33,44,5,6,7,8)
+        function mul(...a){
+            let mul=1
+            for(i of a){
+                mul=mul*i
+            }
+            console.log(mul)
+        }
+        mul(2,3,4,5,6)
+        //shallow copy
+        let arr3=[7,89,40,70]
+        let arr4=arr3
+        arr4[2]=60
+        console.log(arr4)
+        let details={phn:"63286767",pincode:"506002"}
+        let obj4=details
+        obj4.marks=80
+        obj4.course="Btech"
+        console.log(obj4)
+        //deep copy
+        let list=[1,44,67,8,3]
+        let list1=JSON.parse(JSON.stringify(list))
+        list1[0]=2
+        console.log(list)
+        let list3=[4,8,5,3,9,7]
+        let list4=JSON.parse(JSON.stringify(list3))
+        list4[5]=90
+        console.log(list3)
+        console.log(list4)
+
+
+        
+
+
+
+
+        
+
+        
+    </script>
+
+    
+</body>
+</html>
